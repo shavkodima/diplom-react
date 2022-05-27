@@ -1,0 +1,24 @@
+
+.repo-list__item{
+  display: flex;
+  justify-content: space-between;
+  gap:30px;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #fff;
+
+  & .name-repo{
+    flex:0 1 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  & .stars-repo{
+      flex: 0 0 100px;
+  }
+
+  & .update-repo{
+    text-align: center;
+    flex: 0 0 150px;
+  }
+}

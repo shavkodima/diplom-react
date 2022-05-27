@@ -1,0 +1,24 @@
+.card-repo{
+    background-color: #f1f1f1;
+    padding: 10px;
+
+    & .card-repo__title{
+
+    }
+
+    &__content{
+        display: flex;
+        gap:20px;
+
+        & .card-content__item{
+            
+            & .card-avatar{
+                max-width: 300px;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

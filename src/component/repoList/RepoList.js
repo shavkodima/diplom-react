@@ -1,0 +1,23 @@
+import React from 'react';
+import RepoListItem from "./repoListItem/RepoListItem";
+import {useAppSelector} from "../../hooks/storeHooks/storeHooks";
+import './repoList.scss'
+const RepoList = () => {
+    const {post} = useAppSelector(store => store.post)
+    return (
+        <div className={'repo-list'}>
+            <div className={'repo-list__header'}>
+                <div className={'name-repo__header'}>Название репозитория</div>
+                <div className={'stars-repo__header'}>Количество звезд</div>
+                <div className={'update-repo__header'}>Последний комммит</div>
+            </div>
+            {
+                post.items && post.items.map((elem)=>{
+                   return  <RepoListItem key={elem.id} props={elem}/>
+                })
+            }
+        </div>
+    );
+};
+
+export default RepoList;

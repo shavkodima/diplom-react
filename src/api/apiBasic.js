@@ -9,7 +9,7 @@ const apiBasic = ()=>{
         responseType: 'json',
         headers: {
             "Content-type": "application/json",
-            "Authorization": "token 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"
+            "Authorization": "token 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"
 
         },
     })

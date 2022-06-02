@@ -8,6 +8,7 @@ const PaginationApp = () => {
     const dispatch = useAppDispatch()
 
     const handlerPagination = (current, pageSize)=>{
+        localStorage.setItem('page', current)
         dispatch(setPage(current))
     }
 
@@ -15,8 +16,11 @@ const PaginationApp = () => {
     return (
         <div>
             <Pagination
-                defaultCurrent={page} total={post.total_count}
+                current = {page}
+                defaultCurrent={1}
+                total={post.total_count < 100 ? post.total_count : 100}
                 onChange={handlerPagination}
+                showSizeChanger={false}
             />
         </div>
     );

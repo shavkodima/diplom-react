@@ -29,11 +29,8 @@ const singleRepoSlice = createSlice({
 export const getSingleOperation = (path)=> async(dispatch)=>{
     dispatch(setLoading(true))
     try {
-        console.log('Запрос данных')
         const response = await apiGitHub.getSingleRepo(path)
-        console.log('Получили ответ')
         dispatch(setSingleRepo(response.data))
-        console.log('Произошол dispatch данных в Store')
     }catch (e){
         dispatch(setError(e.message))
     }

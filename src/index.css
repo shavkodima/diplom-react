@@ -5,6 +5,10 @@
 }
 
 
+a {
+  text-decoration:none;
+}
+
 li {
   list-style: none;
 }
@@ -17,4 +21,9 @@ a{
   max-width: 1366px;
   margin:0 auto;
   padding: 0 20px;
+}
+
+.container{
+  max-width: 1366px;
+  margin:0 auto;
 }

@@ -1,0 +1,26 @@
+header{
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin: 0 auto;
+    max-width: 1366px;
+    margin-bottom: 30px;
+    
+    & .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-back__icon{
+        cursor: pointer;
+    }
+
+    & .header-logo{
+        & a{
+            font-size: 20px;
+        }
+    }
+
+    & #search-input{
+        max-width:300px;
+    }
+}

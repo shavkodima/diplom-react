@@ -1,4 +1,5 @@
 .repo-list{
+  height: 80vh;
   background: #f1f1f1;
   margin-bottom: 20px;
   padding: 10px;
@@ -8,20 +9,21 @@
   & .repo-list__header{
     display: flex;
     justify-content: space-between;
-    gap:30px;
     padding: 10px 0;
+    font-size: 18px;
+    align-items: center;
 
     & .name-repo__header{
-      flex:0 1 80%;
+      flex:0 1 50%;
     }
 
     & .stars-repo__header{
-      flex: 0 0 120px;
+      flex: 0 0 150px;
     }
 
     & .update-repo__header{
       text-align: center;
-      flex: 0 0 170px;
+      flex: 0 0 230px;
     }
   }
 }

@@ -1,27 +1,28 @@
 import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../hooks/storeHooks/storeHooks";
-import { setSingleRepo } from '../../store/singlePostSlice/singleRepoSlice';
+import { setSearchPath, setSingleRepo } from '../../store/singlePostSlice/singleRepoSlice';
 import parseDateString from '../../utils';
+import Spinner from '../spinner/Spinner';
 import './cardRepo.scss';
 
 const CardRepo = () => {
-    const {singleRepo, error, loading} = useAppSelector(store => store.singleRepo)
+    const {singleRepo, error, loading } = useAppSelector(store => store.singleRepo)
     const dispatch = useAppDispatch()
     const {date, time} = parseDateString(singleRepo.updated_at)
 
+
     useEffect(()=>{
-        
+        dispatch(setSearchPath(''))
         return ()=>{
             dispatch(setSingleRepo([]))
         }
     },[])
 
-    console.log(singleRepo);
 
     return (
         <>
         {
-            loading && <h1>Loading</h1>
+            loading && <Spinner title="Загрузка профиля" />
         }
         {
             error && <h1>{error}</h1>
